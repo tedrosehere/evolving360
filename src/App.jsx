@@ -29,7 +29,7 @@ const SECTIONS = [
     id: "systemic", label: "IT — Systemic",
     subsections: [
       { id: "strategic-clarity", label: "Strategic Clarity",      desc: "Can they articulate a compelling future and a clear path from here to there in a way that empowers action?" },
-      { id: "org-fitness",       label: "Organizational Fitness", desc: "Are they redesigning workflows and decision rights for what AI now makes possible — or adding new tools to old forms?" },
+      { id: "org-fitness",       label: "Organizational Fitness", desc: "How do they approach organizational development amidst technological change?" },
       { id: "adaptive-capacity", label: "Adaptive Capacity",      desc: "Can they recognize when organizational tensions are permanent polarities to navigate, not problems to finally solve?" },
     ],
   },
@@ -41,7 +41,7 @@ const SECTIONS = [
   },
 ];
 
-const INSTRUCTION_TEXT = "We are including three Likert-scale questions and three subjective questions per sub-section, but will ultimately use only 1 or 2 of each. Please vote for the ones you find most useful, or propose a new one.";
+const INSTRUCTION_TEXT = "For each sub-section, we are proposing two Likert-scale questions, which will be answered by entering a value between 1 (fixed) and 7 (evolving) and one subjective question which will produce open ended answers we will use for quotations.\n\nFeel free to vote for these, make comments, or suggest new questions for each sub-section.";
 
 const COLORS = {
   bg: "#F7F6F3",

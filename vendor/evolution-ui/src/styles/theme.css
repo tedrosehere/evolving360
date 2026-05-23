@@ -1,0 +1,234 @@
+@theme {
+  /* ---------- Surfaces ---------- */
+  --color-surface-background: var(--eu-bg);
+  --color-card: var(--eu-surface);
+  --color-card-foreground: var(--eu-ink);
+  --color-popover: var(--eu-surface);
+  --color-popover-foreground: var(--eu-ink);
+
+  /* ---------- Ink ramp (text — eui naming) ---------- */
+  --color-ink: var(--eu-ink);
+  --color-secondary: var(--eu-secondary);
+  --color-tertiary: var(--eu-tertiary);
+  --color-label: var(--eu-label);
+  --color-disabled: var(--eu-disabled);
+  --color-on-accent: var(--eu-on-accent);
+
+  /* ---------- Action / brand ---------- */
+  --color-primary: var(--eu-teal);
+  --color-accent-primary-foreground: var(--eu-on-accent);
+
+  /* ---------- Muted / accent ---------- */
+  --color-muted: var(--eu-bg-sunken);
+  --color-accent: var(--eu-surface-2);
+  --color-accent-foreground: var(--eu-ink);
+
+  /* ---------- Status ---------- */
+  --color-error: var(--eu-error);
+  --color-error-foreground: var(--eu-on-accent);
+  --color-error-hover: var(--eu-error-hover);
+  --color-error-light: var(--eu-error-light);
+  --color-error-tint: var(--eu-error-tint);
+  --color-warning: var(--eu-amber);
+  --color-warning-hover: var(--eu-amber-hover);
+  --color-warning-light: var(--eu-amber-light);
+  --color-warning-tint: var(--eu-amber-tint);
+
+  /* ---------- Form chrome ---------- */
+  --color-border: var(--eu-border);
+  --color-border-strong: var(--eu-border-strong);
+  --color-separator: var(--eu-separator);
+  --color-input: var(--eu-border);
+  --color-switch-background: var(--eu-border-strong);
+  --color-ring: var(--eu-teal);
+
+  /* ---------- Surface aliases (eu-* without the prefix) ---------- */
+  --color-surface: var(--eu-surface);
+  --color-surface-2: var(--eu-surface-2);
+  --color-surface-3: var(--eu-surface-3);
+  --color-canvas: var(--eu-canvas);
+  --color-bg: var(--eu-bg);
+  --color-bg-sunken: var(--eu-bg-sunken);
+
+  /* ---------- Brand color aliases (without eu- prefix) ---------- */
+  --color-teal: var(--eu-teal);
+  --color-teal-hover: var(--eu-teal-hover);
+  --color-teal-light: var(--eu-teal-light);
+  --color-teal-tint: var(--eu-teal-tint);
+  --color-amber: var(--eu-amber);
+  --color-amber-hover: var(--eu-amber-hover);
+  --color-amber-light: var(--eu-amber-light);
+  --color-amber-tint: var(--eu-amber-tint);
+  --color-info: var(--eu-info);
+  --color-info-hover: var(--eu-info-hover);
+  --color-info-light: var(--eu-info-light);
+  --color-info-tint: var(--eu-info-tint);
+
+
+  /* ---------- Inactive (warm grays) ---------- */
+  --color-inactive: var(--eu-inactive);
+  --color-inactive-light: var(--eu-inactive-light);
+
+  /* ---------- Translucent overlays ---------- */
+  --color-hover-light: var(--eu-hover-light);
+  --color-hover: var(--eu-hover);
+  --color-hover-strong: var(--eu-hover-strong);
+  --color-scrim: var(--eu-scrim);
+
+  /* ---------- Charts ---------- */
+  --color-chart-1: var(--eu-teal);
+  --color-chart-2: var(--eu-amber);
+  --color-chart-3: var(--eu-info);
+  --color-chart-4: var(--eu-error);
+  --color-chart-5: var(--eu-teal-light);
+
+  /* ---------- Brand-specific tokens (no shadcn equivalent) ---------- */
+  --color-eos-primary-hover: var(--eu-teal-hover);
+  --color-eos-success-light: var(--eu-teal-light);
+  --color-accent-neutral: var(--eu-info);
+  --color-accent-neutral-light: var(--eu-info-light);
+  --color-accent-inactive: var(--eu-inactive);
+  --color-accent-inactive-light: var(--eu-inactive-light);
+  --color-eos-input-ring: var(--eos-input-ring);
+  --color-eos-input-ring-muted: var(--eos-input-ring-muted);
+  --color-eos-input-shadow: var(--eos-input-shadow);
+  --color-eos-scrim: var(--eu-scrim);
+
+  /* ============================================================
+     Evolution UI palette — exposed as Tailwind utilities so
+     bg-eu-teal, text-eu-ink, border-eu-border-strong, etc. all
+     work. Co-exists with the shadcn semantic tokens above.
+     ============================================================ */
+
+  /* Brand */
+  --color-eu-teal: var(--eu-teal);
+  --color-eu-teal-hover: var(--eu-teal-hover);
+  --color-eu-teal-light: var(--eu-teal-light);
+  --color-eu-teal-tint: var(--eu-teal-tint);
+
+  /* Warm warning */
+  --color-eu-amber: var(--eu-amber);
+  --color-eu-amber-hover: var(--eu-amber-hover);
+  --color-eu-amber-light: var(--eu-amber-light);
+  --color-eu-amber-tint: var(--eu-amber-tint);
+
+  /* Destructive */
+  --color-eu-error: var(--eu-error);
+  --color-eu-error-hover: var(--eu-error-hover);
+  --color-eu-error-light: var(--eu-error-light);
+  --color-eu-error-tint: var(--eu-error-tint);
+
+  /* Cool / informational */
+  --color-eu-info: var(--eu-info);
+  --color-eu-info-hover: var(--eu-info-hover);
+  --color-eu-info-light: var(--eu-info-light);
+  --color-eu-info-tint: var(--eu-info-tint);
+
+  /* Surfaces */
+  --color-eu-bg: var(--eu-bg);
+  --color-eu-bg-sunken: var(--eu-bg-sunken);
+  --color-eu-surface: var(--eu-surface);
+  --color-eu-surface-2: var(--eu-surface-2);
+  --color-eu-surface-3: var(--eu-surface-3);
+
+  /* Borders & separators */
+  --color-eu-border: var(--eu-border);
+  --color-eu-border-strong: var(--eu-border-strong);
+  --color-eu-separator: var(--eu-separator);
+
+  /* Inactive */
+  --color-eu-inactive: var(--eu-inactive);
+  --color-eu-inactive-light: var(--eu-inactive-light);
+
+  /* Translucent overlays */
+  --color-eu-hover: var(--eu-hover);
+  --color-eu-hover-strong: var(--eu-hover-strong);
+  --color-eu-scrim: var(--eu-scrim);
+
+  /* Ink (text) */
+  --color-eu-ink: var(--eu-ink);
+  --color-eu-label: var(--eu-label);
+  --color-eu-secondary: var(--eu-secondary);
+  --color-eu-tertiary: var(--eu-tertiary);
+  --color-eu-disabled: var(--eu-disabled);
+  --color-eu-on-accent: var(--eu-on-accent);
+
+  /* ============================================================
+     Shadow system — eu drop-shadow elevation scale exposed as
+     `shadow-xs / sm / md / lg / xl / popover` Tailwind utilities,
+     plus an inset "bevel" pair for filled buttons that stacks
+     with the drop shadow via `inset-shadow-*`.
+
+       shadow-xs        — 1px micro lift (active tabs, agent avatars)
+       shadow-sm        — resting elevation (buttons, cards)
+       shadow-md        — hover elevation (button hover, raised cards)
+       shadow-lg        — pronounced (large panels)
+       shadow-xl        — heavy (dialogs, sheets, alert-dialogs)
+       shadow-popover   — popover/menu surfaces (sm + 1px border emul.)
+
+       inset-shadow-bevel       — top highlight + bottom hard shadow,
+                                  used on filled buttons (default,
+                                  destructive) to read as chiseled
+       inset-shadow-bevel-light — lighter top-only highlight, used on
+                                  card-surface field triggers
+
+       shadow-focus-ring        — 3px teal focus ring as a shadow
+       shadow-error-ring        — 3px error focus ring as a shadow
+     ============================================================ */
+  --shadow-xs: var(--eu-shadow-xs);
+  --shadow-sm: var(--eu-shadow-sm);
+  --shadow-md: var(--eu-shadow-md);
+  --shadow-lg: var(--eu-shadow-lg);
+  --shadow-xl: var(--eu-shadow-xl);
+  --shadow-popover: var(--eu-shadow-popover);
+  --shadow-focus-ring: var(--eu-ring-focus);
+  --shadow-error-ring: var(--eu-ring-error);
+
+  --inset-shadow-bevel: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  --inset-shadow-bevel-light: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  /* ---------- Border Radius ---------- */
+  --radius-3xs: var(--radius-3xs);
+
+  /* ---------- Font families (eui stack) ---------- */
+  --font-sans: var(--eu-font-sans);
+  --font-serif: var(--eu-font-serif);
+  --font-mono: var(--eu-font-mono);
+
+  /* ============================================================
+     Font sizes — eui scale (overrides Tailwind defaults)
+     11/12/13/14/15/16/18/20/24/28/32/40/48/60 px
+     ============================================================ */
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 13px;
+  --text-md:   14px;
+  --text-lg:   15px;
+  --text-xl:   16px;
+  --text-2xl:  18px;
+  --text-3xl:  20px;
+  --text-4xl:  24px;
+  --text-5xl:  28px;
+  --text-6xl:  32px;
+  --text-7xl:  40px;
+  --text-8xl:  48px;
+  --text-9xl:  60px;
+
+  /* Legacy size tokens — kept for backwards compat with any inline use. */
+  --text-h2: var(--eos-text-size-h2);
+  --text-eos-h4: var(--eos-text-size-h4);
+  --text-eos-small: var(--eos-text-size-small);
+}
+
+@theme inline {
+  --color-sidebar: var(--eu-bg-sunken);
+  --color-sidebar-foreground: var(--eu-ink);
+  --color-sidebar-primary: var(--eu-teal);
+  --color-sidebar-primary-foreground: var(--eu-on-accent);
+  --color-sidebar-accent: var(--eu-surface-2);
+  --color-sidebar-accent-foreground: var(--eu-ink);
+  --color-sidebar-border: var(--eu-border);
+  --color-sidebar-ring: var(--eu-teal);
+  --color-switch-background: var(--eu-border-strong);
+}

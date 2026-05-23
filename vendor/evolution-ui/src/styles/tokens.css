@@ -1,0 +1,530 @@
+/* ============================================================
+   evolution-ui Design Tokens
+   Single source of truth: evolution-ui palette (--eu-*).
+   Shadcn semantic tokens (--primary, --background, etc.) and
+   the legacy --eos-* tokens are aliases on top of --eu-*.
+   ============================================================ */
+
+:root {
+  /* ---------- Brand accents (evolution-ui) ---------- */
+  --eu-teal:        #2A9D8F;
+  --eu-teal-hover:  #248578;
+  --eu-teal-light:  #E0EFED;
+  --eu-teal-tint:   #EEF7F5;
+
+  --eu-amber:       #E9A23B;
+  --eu-amber-hover: #D08C28;
+  --eu-amber-light: #FDF3E2;
+  --eu-amber-tint:  #FEF9EE;
+
+  --eu-error:       #D64550;
+  --eu-error-hover: #B83740;
+  --eu-error-light: #FDEAEB;
+  --eu-error-tint:  #FDF4F4;
+
+  /* Warm periwinkle / soft violet-blue (hue 268). Reads as "info /
+     blue" but harmonizes with the cream + amber palette. */
+  --eu-info:        oklch(58.0% 0.06  268);
+  --eu-info-hover:  oklch(52.0% 0.06  268);
+  --eu-info-light:  oklch(94.0% 0.018 268);
+  --eu-info-tint:   oklch(97.0% 0.012 268);
+
+  /* ---------- Warm neutrals ---------- */
+  --eu-bg:          oklch(98.2% 0.006 85);
+  --eu-bg-sunken:   oklch(96.4% 0.008 85);
+  --eu-canvas:      oklch(98.85% 0.005 85);
+  --eu-surface:     oklch(99.5% 0.003 85);
+  --eu-surface-2:   oklch(94.8% 0.008 85);
+  --eu-surface-3:   oklch(91.5% 0.010 85);
+
+  --eu-hover-light:  rgba(110, 60, 35, 0.03);
+  --eu-hover:        rgba(110, 60, 35, 0.06);
+  --eu-hover-strong: rgba(110, 60, 35, 0.09);
+
+  --eu-border:        oklch(91.0% 0.006 85);
+  --eu-border-strong: oklch(86.0% 0.008 85);
+  --eu-separator:     oklch(91.5% 0.006 85);
+  /* Warm-tinted neutral grays — hue 85 keeps them in the cream
+     family, low chroma keeps them quiet next to the actual brand
+     swatches. */
+  --eu-inactive:      oklch(58.0% 0.008 85);
+  --eu-inactive-light: oklch(93.0% 0.006 85);
+  --eu-scrim:         rgba(20, 28, 26, 0.45);
+
+  /* ---------- Ink (text) ---------- */
+  --eu-ink:        #1A2421;
+  --eu-label:      #555555;
+  --eu-secondary:  rgba(26, 36, 33, 0.62);
+  --eu-tertiary:   rgba(26, 36, 33, 0.42);
+  --eu-disabled:   rgba(26, 36, 33, 0.28);
+  --eu-on-accent:  #FFFFFF;
+
+  /* ---------- Type ---------- */
+  /* Wired to Next.js font loader CSS vars from layout.tsx; falls back
+     to the same web-fonts loaded by the gallery (Google Fonts) and
+     finally to system fonts. */
+  --eu-font-serif: var(--font-source-serif), 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --eu-font-sans:  var(--font-public-sans), 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --eu-font-mono:  var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --eu-text-xs:   11px;
+  --eu-text-sm:   12px;
+  --eu-text-base: 13px;
+  --eu-text-md:   14px;
+  --eu-text-lg:   15px;
+  --eu-text-xl:   16px;
+  --eu-text-2xl:  18px;
+  --eu-text-3xl:  20px;
+  --eu-text-4xl:  24px;
+  --eu-text-5xl:  28px;
+  --eu-text-6xl:  32px;
+  --eu-text-7xl:  40px;
+  --eu-text-8xl:  48px;
+  --eu-text-9xl:  60px;
+
+  --eu-leading-none:    1;
+  --eu-leading-tight:   1.15;
+  --eu-leading-snug:    1.3;
+  --eu-leading-normal:  1.5;
+  --eu-leading-relaxed: 1.65;
+  --eu-leading-loose:   1.8;
+
+  --eu-tracking-tighter: -0.025em;
+  --eu-tracking-tight:   -0.015em;
+  --eu-tracking-normal:  0;
+  --eu-tracking-wide:    0.02em;
+  --eu-tracking-wider:   0.06em;
+  --eu-tracking-widest:  0.12em;
+
+  --eu-weight-regular:  400;
+  --eu-weight-medium:   500;
+  --eu-weight-semibold: 600;
+  --eu-weight-bold:     700;
+
+  /* ---------- Radii ---------- */
+  --eu-radius-3xs:  2px;
+  --eu-radius-xs:   4px;
+  --eu-radius-sm:   6px;
+  --eu-radius-md:   10px;
+  --eu-radius-lg:   14px;
+  --eu-radius-xl:   20px;
+  --eu-radius-2xl:  28px;
+  --eu-radius-full: 999px;
+
+  /* ---------- Spacing ---------- */
+  --eu-space-1:  4px;
+  --eu-space-2:  8px;
+  --eu-space-3:  12px;
+  --eu-space-4:  16px;
+  --eu-space-5:  20px;
+  --eu-space-6:  24px;
+  --eu-space-7:  32px;
+  --eu-space-8:  40px;
+  --eu-space-9:  56px;
+  --eu-space-10: 72px;
+
+  /* ---------- Shadows ---------- */
+  --eu-shadow-xs: 0 1px 1px rgba(60, 50, 30, 0.025);
+  --eu-shadow-sm: 0 1px 2px rgba(60, 50, 30, 0.03);
+  --eu-shadow-md:
+    0 1px 2px rgba(60, 50, 30, 0.03),
+    0 4px 10px rgba(60, 50, 30, 0.04);
+  --eu-shadow-lg:
+    0 2px 4px rgba(60, 50, 30, 0.04),
+    0 10px 24px rgba(60, 50, 30, 0.06);
+  --eu-shadow-xl:
+    0 4px 8px rgba(60, 50, 30, 0.05),
+    0 18px 40px rgba(60, 50, 30, 0.08);
+  --eu-shadow-popover:
+    0 1px 2px rgba(60, 50, 30, 0.04),
+    0 8px 20px rgba(60, 50, 30, 0.08),
+    0 0 0 1px rgba(60, 50, 30, 0.04);
+
+  --eu-ring-focus: 0 0 0 3px rgba(42, 157, 143, 0.28);
+  --eu-ring-error: 0 0 0 3px rgba(214, 69, 80, 0.25);
+
+  /* ---------- Motion ---------- */
+  --eu-ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --eu-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --eu-dur-fast: 120ms;
+  --eu-dur-base: 200ms;
+  --eu-dur-slow: 360ms;
+
+  /* The eu-* palette above is the only canonical layer. Theme.css
+     exposes these directly as Tailwind utility colors (bg-eu-teal,
+     text-eu-ink, …) plus a set of friendly short-name utilities
+     (bg-primary, text-ink, bg-error, …). */
+  --radius: var(--eu-radius-md);
+
+  /* Functional alpha overlays (not derivable from --eu-*). */
+  --eos-input-ring:       rgba(26, 36, 33, 0.16);
+  --eos-input-ring-muted: rgba(26, 36, 33, 0.08);
+  --eos-input-shadow:     rgba(0, 0, 0, 0.08);
+
+  /* Legacy font-size tokens (one-off use in older code). */
+  --eos-text-size-h2:    1.625rem;
+  --eos-text-size-small: 0.815rem;
+  --eos-text-size-h4:    1.125rem;
+
+  /* Misc compat */
+  --tw-border-style: solid;
+  --radius-3xs: var(--eu-radius-3xs);
+}
+
+/* ============================================================
+   Dark mode — evolution-ui's warm-cream-on-charcoal scheme.
+   ============================================================ */
+[data-theme="dark"],
+.dark {
+  /* Brand accents */
+  --eu-teal:        #4FBFB1;
+  --eu-teal-hover:  #66CFC1;
+  --eu-teal-light:  rgba(79, 191, 177, 0.18);
+  --eu-teal-tint:   rgba(79, 191, 177, 0.10);
+
+  --eu-amber:       #F4B65A;
+  --eu-amber-hover: #F8C77B;
+  --eu-amber-light: rgba(244, 182, 90, 0.18);
+  --eu-amber-tint:  rgba(244, 182, 90, 0.10);
+
+  --eu-error:       #E86570;
+  --eu-error-hover: #EF7E88;
+  --eu-error-light: rgba(232, 101, 112, 0.18);
+  --eu-error-tint:  rgba(232, 101, 112, 0.10);
+
+  --eu-info:        oklch(72.0% 0.06  268);
+  --eu-info-hover:  oklch(76.0% 0.06  268);
+  --eu-info-light:  oklch(32.0% 0.03  268);
+  --eu-info-tint:   oklch(28.0% 0.025 268);
+
+  /* Warm neutrals */
+  --eu-bg:          oklch(22.0% 0.006 85);
+  --eu-bg-sunken:   rgba(0, 0, 0, 0.18);
+  --eu-canvas:      oklch(24.0% 0.007 85);
+  --eu-surface:     oklch(26.0% 0.007 85);
+  --eu-surface-2:   oklch(30.0% 0.008 85);
+  --eu-surface-3:   oklch(35.0% 0.009 85);
+
+  --eu-hover-light:  rgba(244, 237, 224, 0.02);
+  --eu-hover:        rgba(244, 237, 224, 0.04);
+  --eu-hover-strong: rgba(244, 237, 224, 0.06);
+
+  --eu-border:        oklch(34.0% 0.008 85);
+  --eu-border-strong: oklch(42.0% 0.010 85);
+  --eu-separator:     oklch(31.0% 0.006 85);
+  --eu-inactive:      oklch(58.0% 0.008 85);
+  --eu-inactive-light: oklch(30.0% 0.006 85);
+  --eu-scrim:         rgba(0, 0, 0, 0.55);
+
+  /* Ink */
+  --eu-ink:        #F4EDE0;
+  --eu-label:      #C2B8A6;
+  --eu-secondary:  rgba(244, 237, 224, 0.70);
+  --eu-tertiary:   rgba(244, 237, 224, 0.48);
+  --eu-disabled:   rgba(244, 237, 224, 0.30);
+  --eu-on-accent:  #15201D;
+
+  /* Shadows */
+  --eu-shadow-xs: 0 1px 1px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,240,220,0.04);
+  --eu-shadow-sm: 0 1px 2px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.25);
+  --eu-shadow-md: 0 2px 4px rgba(0,0,0,0.3), 0 6px 14px rgba(0,0,0,0.30);
+  --eu-shadow-lg: 0 4px 8px rgba(0,0,0,0.35), 0 14px 32px rgba(0,0,0,0.40);
+  --eu-shadow-xl: 0 6px 12px rgba(0,0,0,0.40), 0 24px 56px rgba(0,0,0,0.50);
+  --eu-shadow-popover:
+    0 2px 4px rgba(0,0,0,0.30),
+    0 12px 28px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,240,220,0.06);
+
+  --eu-ring-focus: 0 0 0 3px rgba(79, 191, 177, 0.32);
+  --eu-ring-error: 0 0 0 3px rgba(232, 101, 112, 0.30);
+
+  /* Shadcn semantic aliases re-resolve automatically because they
+     reference --eu-* via var(). Only the few that point at literals
+     (input ring/shadow opacity) need an explicit dark override. */
+  --eos-input-ring:       rgba(255, 240, 220, 0.18);
+  --eos-input-ring-muted: rgba(255, 240, 220, 0.08);
+  --eos-input-shadow:     rgba(0, 0, 0, 0.4);
+}
+
+/* Bounce-in: scale-up with a slight overshoot. Used by Checkbox and
+   Radio to animate the indicator on check. */
+@keyframes eu-bounce-in {
+  0%   { transform: scale(0.6); opacity: 0; }
+  60%  { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Dialog entrance — pops in with a stronger overshoot for personality.
+   Pair with --eu-ease-bounce so the curve reinforces the keyframe
+   crest. Exit is a softer slide-out (no overshoot). */
+@keyframes eu-dialog-in {
+  0%   { opacity: 0; transform: translateY(24px) scale(0.85); }
+  55%  { opacity: 1; transform: translateY(-6px) scale(1.05); }
+  100% { opacity: 1; transform: translateY(0)    scale(1); }
+}
+@keyframes eu-dialog-out {
+  from { opacity: 1; transform: translateY(0)    scale(1); }
+  to   { opacity: 0; transform: translateY(12px) scale(0.94); }
+}
+
+/* Menu entrance — clean fade + scale, no overshoot. Pair with
+   --eu-ease-out for a fast smooth open. The keyframe is direction-
+   agnostic so it works regardless of which side the menu pops
+   out from (top / bottom / left / right). */
+@keyframes eu-menu-in {
+  0%   { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes eu-menu-out {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.96); }
+}
+
+/* Collapsible — height-based expand/collapse using Radix's
+   --radix-collapsible-content-height var. No overshoot on the
+   height (would clip content) but a fade keeps it lively. */
+@keyframes eu-collapsible-down {
+  0%   { height: 0; opacity: 0; }
+  100% { height: var(--radix-collapsible-content-height); opacity: 1; }
+}
+@keyframes eu-collapsible-up {
+  0%   { height: var(--radix-collapsible-content-height); opacity: 1; }
+  100% { height: 0; opacity: 0; }
+}
+
+/* Scrim fade — straight opacity tween, no transform. */
+@keyframes eu-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes eu-overlay-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Sheet entrance — slide from offscreen with a slight overshoot
+   when paired with --eu-ease-bounce. The exit is a plain slide-out
+   on ease-out so it doesn't feel sticky. */
+@keyframes eu-sheet-in-right  { from { transform: translateX( 100%); } to { transform: translateX(0); } }
+@keyframes eu-sheet-in-left   { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes eu-sheet-in-top    { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes eu-sheet-in-bottom { from { transform: translateY( 100%); } to { transform: translateY(0); } }
+@keyframes eu-sheet-out-right  { from { transform: translateX(0); } to { transform: translateX( 100%); } }
+@keyframes eu-sheet-out-left   { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@keyframes eu-sheet-out-top    { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+@keyframes eu-sheet-out-bottom { from { transform: translateY(0); } to { transform: translateY( 100%); } }
+
+/* Indeterminate progress — bar slides across the track on a loop. */
+@keyframes eu-progress-slide {
+  0%   { transform: translateX(-110%); }
+  100% { transform: translateX( 260%); }
+}
+
+/* Skeleton shimmer — gradient highlight flows left → right (the
+   direction is reversed from eui's keyframe so the brightest pixel
+   moves with the user's reading direction). */
+@keyframes eu-shimmer {
+  0%   { background-position:  200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Spin — shared loader animation used by ToolCall / ProgressCard /
+   TodoList / Compose. The `.eu-spin` utility is exposed globally so
+   any lucide / SVG can pick it up via className. */
+@keyframes eu-spin { to { transform: rotate(360deg); } }
+.eu-spin { animation: eu-spin 0.9s linear infinite; }
+
+/* Pulse — used by the ChatSession streaming dot and any other
+   "live" indicator. */
+@keyframes eu-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%      { transform: scale(1.3); opacity: 0.55; }
+}
+
+/* Streaming text — gradient masked through the text so the bright
+   highlight wipes left → right. Wraps a leaf text node only;
+   `-webkit-text-fill-color: transparent` would hide nested elements. */
+@keyframes eu-streaming-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.eu-streaming {
+  background: linear-gradient(
+    90deg,
+    var(--eu-ink) 0%,
+    var(--eu-ink) 40%,
+    var(--eu-tertiary) 50%,
+    var(--eu-ink) 60%,
+    var(--eu-ink) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: eu-streaming-shimmer 2.2s linear infinite;
+}
+
+/* Thinking-dot — three dots staggered with a small vertical bounce.
+   Apply to each dot and stagger via inline `animation-delay` (negative
+   so all three are mid-cycle on first paint). */
+@keyframes eu-thinking-dot {
+  0%, 80%, 100% { transform: translateY(0);    opacity: 0.35; }
+  40%          { transform: translateY(-3px); opacity: 1; }
+}
+.eu-thinking-dot {
+  animation: eu-thinking-dot 1.2s ease-in-out infinite both;
+}
+
+/* ============================================================
+   Editorial typography utilities — serif heading scale + small
+   `eyebrow` / `caption` body styles.
+
+   Bare `h1`-`h6` elements are styled at the @layer base level so
+   any heading in the app picks up the editorial scale by default
+   (h1 → heading-1, h2 → heading-2, …, h6 → heading-6). Type-
+   selector specificity (0,0,1) keeps them weaker than any Tailwind
+   utility (0,1,0), so consumers can still override on a per-tag
+   basis with `<h2 className="text-md font-semibold">`.
+
+   The `.heading-*` component classes are kept for cases where you
+   want to apply heading typography to a non-heading element (e.g.
+   `<div className="heading-2">` for a styled label) without using
+   the wrong semantic tag. They're in @layer components so they
+   win over the base h* defaults if both apply to the same element
+   — consumers can compose `<h1 className="heading-2">` to render
+   an h1 with h2 typography.
+   ============================================================ */
+@layer base {
+  h1 {
+    font-family: var(--eu-font-serif);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--eu-ink);
+  }
+  h2 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--eu-ink);
+  }
+  h3 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  h4 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  h5 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  h6 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+}
+
+@layer components {
+  .heading-display {
+    font-family: var(--eu-font-serif);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--eu-ink);
+  }
+  .heading-1 {
+    font-family: var(--eu-font-serif);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--eu-ink);
+  }
+  .heading-2 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--eu-ink);
+  }
+  .heading-3 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  .heading-4 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  .heading-5 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  .heading-6 {
+    font-family: var(--eu-font-serif);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--eu-ink);
+  }
+  .eyebrow {
+    font-family: var(--eu-font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--eu-tertiary);
+  }
+  .caption {
+    font-family: var(--eu-font-sans);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--eu-secondary);
+  }
+}
+
+/* Typewriter cursor — block-style cursor blinking at the tail of a
+   `<TypewriterMD>` while it's still typing. Auto-resolves to the
+   current text color via `currentColor`. */
+.eu-typewriter-cursor {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1em;
+  vertical-align: -0.12em;
+  margin-left: 1px;
+  background: currentColor;
+  opacity: 0.85;
+  animation: eu-typewriter-blink 0.9s step-end infinite;
+}
+
+@keyframes eu-typewriter-blink {
+  0%, 60% { opacity: 0.85; }
+  61%, 100% { opacity: 0; }
+}
